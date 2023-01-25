@@ -1,0 +1,14 @@
+.form-field {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .icon {
+    position: absolute;
+    right: 0;
+  }
+
+  .SearchBar{
+    margin-top: 50px;
+    width: 700px;
+  }

@@ -1,38 +1,100 @@
-.App {
-  text-align: center;
+
+
+
+/*Page Layout*/
+
+.headerObjects{
+  
+  left: 200px;
+  height: 100px;
+  padding: 25px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.leftDiv{
+  position: absolute;
+  height: 100%;
+  width: 230px;
+  background-color:rgb(77, 77, 77);
+
+}
+.mainDiv{
+  position: absolute;
+  left: 230px;
+  height: 100%;
+  width: 1450px;
+  background-image: url(./Img/Background\ image\ cut.png)
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/*Header Objects
+- Search bar
+= Notif Icon
+- User Account
+*/
+
+/*Main Objects
+- table
+- yellow add scenario button
+*/
+
+
+.mainTable{
+  padding: 50px;
+  
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.addButton img{
+  left: 81%;
+  top: 80%;
+  position: absolute;
 }
 
-.App-link {
-  color: #61dafb;
+
+/*Left Div Objects
+- Logo
+- Nav Bar
+*/
+
+
+.titleText{
+  left: 40px;
+  top: 100px;
+  position: absolute;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.title{
+  left: 30px;
+  top: 15px;
+  position: absolute;
+
+}
+
+.notifIcon{
+  left: 80%;
+  top: 50px;
+  position: absolute;
+}
+
+.notifIcon img{
+  width:30px;
+  height: 30px;
+}
+.userIcon{
+  left: 83%;
+  top: 30px;
+  position: absolute;
+  
+}
+
+.userIcon img{
+  width: 60px;
+  height: 60px;
+}
+
+.test{
+  background-color: white;
+  
+  width: 100%;
+  height: 500px;
 }
