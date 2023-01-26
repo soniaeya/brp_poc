@@ -1,7 +1,8 @@
 
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import BasicExample from "./Components/Table/Table.js"
-import AddScenarioButton from "./Components/Button/AddScenarioButton"
+import ResponsiveBreakpointsExample from "./Components/Table/Table.js"
+import NewScenarioButton from "./Components/Buttons/NewScenarioButton"
 import SearchBar from "./Components/Header/SearchBar"
 import brpLogo from "./Img/BRP_logo.png"
 import ProLineSSV from "./Img/Pro-Line-SSV.png"
@@ -10,6 +11,9 @@ import addButton from "./Img/+ button.png"
 import notif from "./Img/Notifications.png"
 import userIcon from "./Img/User profile.png"
 import MyNavbar from './Components/Navbar/MyNavbar';
+
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   let scenarios = [];
@@ -22,6 +26,13 @@ function App() {
           </div>
         </div>
         <p className="titleText">PnP Digitalization</p>
+        <div>
+          <MyNavbar></MyNavbar>
+
+        </div>
+
+
+
       </div>
       <div className="mainDiv">
         <div className="headerObjects">
@@ -35,10 +46,12 @@ function App() {
           <SearchBar></SearchBar>
         </div>
         <div className="mainTable">
-          <BasicExample></BasicExample>
+          <ResponsiveBreakpointsExample></ResponsiveBreakpointsExample>
         </div>
         <div className="addButton">
-          <img src={addButton} alt="addButton"></img>
+
+
+          <NewScenarioButton></NewScenarioButton>
         </div>
 
       </div>

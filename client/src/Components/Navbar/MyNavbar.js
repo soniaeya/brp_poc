@@ -1,20 +1,29 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import "./MyNavbar.css"
+
+import "./MyNavbar.css";
+import {Dropdown} from "react-bootstrap";
+import {DropdownButton} from "react-bootstrap";
 
 function MyNavbar() {
   const handleSelect = (eventKey) => alert(`selected ${eventKey}`);
 
   return (
-    <Navbar className="flex-column" bg="light" expand="lg">
-      <Container>
-      <NavDropdown.Item href="#">HOMEPAGE</NavDropdown.Item>
-      <NavDropdown.Item href="#">SCENARIO CREATION</NavDropdown.Item>
 
-      </Container>
-    </Navbar>
+        <div className="navbarDiv">
+            <Dropdown>
+
+                <DropdownButton
+                    id="dropdown-button-dark-example2"
+                    variant="secondary"
+                    menuVariant="dark"
+                    title="HOMEPAGE"
+                    className="mt-2"
+                ></DropdownButton>
+
+
+            </Dropdown>
+
+        </div>
+
   );
 }
 

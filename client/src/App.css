@@ -21,8 +21,8 @@
   position: absolute;
   left: 230px;
   height: 100%;
-  width: 1450px;
-  /*background-image: url(./Img/Background\ image\ cut.png)*/
+  width: 1670px;
+  background-image: url(./Img/Background\ image\ cut.png)
 
 }
 
@@ -38,9 +38,11 @@
 */
 
 
-.mainTable{
-  padding: 50px;
-  
+.mainTable {
+  position: relative;
+
+  left: 30px;
+  top: 100px;
 
 }
 

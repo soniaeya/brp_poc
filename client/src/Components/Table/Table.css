@@ -1,0 +1,17 @@
+.tableClass{
+    border-top-color: grey;
+    border-color: white;
+    overflow-y: scroll;
+    height: 700px;
+    width: 1500px;
+    background-color: white;
+}
+
+.folderIcon{
+    width: 80px;
+    text-align: right;
+
+}
+
+
+
