@@ -1,6 +1,6 @@
 
 import './App.css';
-import Table from "./Components/Table/Table.js"
+import BasicExample from "./Components/Table/Table.js"
 import AddScenarioButton from "./Components/Button/AddScenarioButton"
 import SearchBar from "./Components/Header/SearchBar"
 import brpLogo from "./Img/BRP_logo.png"
@@ -35,16 +35,12 @@ function App() {
           <SearchBar></SearchBar>
         </div>
         <div className="mainTable">
-          <Table></Table>
+          <BasicExample></BasicExample>
         </div>
         <div className="addButton">
           <img src={addButton} alt="addButton"></img>
         </div>
 
-        <div className="test">
-          <MyNavbar></MyNavbar>
-
-        </div>
       </div>
     </div>
   );
