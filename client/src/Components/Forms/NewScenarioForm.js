@@ -5,13 +5,13 @@ import 'reactjs-popup/dist/index.css';
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useHistory } from 'react-router-dom';
+import nyan from "../../Img/nyancat.png"
+import userIcon from "../../Img/User profile.png";
 function NewScenarioForm(){
-    let path = `newPath`;
-    let history = useHistory();
-    history.push(path);
+
     return(
         <div>
-            <h1>WHAT</h1>
+            <img src={nyan} alt="user icon"></img>
         </div>
 
     );

@@ -2,10 +2,15 @@
     border-top-color: grey;
     border-color: white;
     overflow-y: scroll;
-    height: 700px;
-    width: 1500px;
+    table-layout: fixed;
+    height: 100%;
+    width: 80%;
     background-color: white;
 }
+
+
+
+
 
 .folderIcon{
     width: 80px;

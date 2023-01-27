@@ -32,12 +32,75 @@ function ResponsiveBreakpointsExample() {
           </tr>
           <tr>
               <td className="folderIcon"><img src={folderIcon} alt="brp_logo"></img></td>
-
             <td>S3</td>
             <td>Table cell</td>
             <td>Table cell</td>
             <td>Table cell</td>
           </tr>
+
+
+
+          <tr>
+            <td className="folderIcon"><img src={folderIcon} alt="brp_logo"></img></td>
+            <td>S3</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+          </tr><tr>
+            <td className="folderIcon"><img src={folderIcon} alt="brp_logo"></img></td>
+            <td>S3</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+          </tr><tr>
+            <td className="folderIcon"><img src={folderIcon} alt="brp_logo"></img></td>
+            <td>S3</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+          </tr><tr>
+            <td className="folderIcon"><img src={folderIcon} alt="brp_logo"></img></td>
+            <td>S3</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+          </tr><tr>
+            <td className="folderIcon"><img src={folderIcon} alt="brp_logo"></img></td>
+            <td>S3</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+          </tr><tr>
+            <td className="folderIcon"><img src={folderIcon} alt="brp_logo"></img></td>
+            <td>S3</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+          </tr><tr>
+            <td className="folderIcon"><img src={folderIcon} alt="brp_logo"></img></td>
+            <td>S3</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+          </tr><tr>
+            <td className="folderIcon"><img src={folderIcon} alt="brp_logo"></img></td>
+            <td>S3</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+          </tr><tr>
+            <td className="folderIcon"><img src={folderIcon} alt="brp_logo"></img></td>
+            <td>S3</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+          </tr>
+
+
+
+
+
+
           </tbody>
           </Table>
 

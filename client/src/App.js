@@ -14,6 +14,8 @@ import MyNavbar from './Components/Navbar/MyNavbar';
 
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import NewScenarioForm from "./Components/Forms/NewScenarioForm";
+import React from "react";
 
 function App() {
   let scenarios = [];
@@ -49,8 +51,8 @@ function App() {
           <ResponsiveBreakpointsExample></ResponsiveBreakpointsExample>
         </div>
         <div className="addButton">
-
-
+          <Route path="/form" element={<NewScenarioForm/>}>
+          </Route>
           <NewScenarioButton></NewScenarioButton>
         </div>
 
