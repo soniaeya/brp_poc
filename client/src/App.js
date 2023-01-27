@@ -50,13 +50,15 @@ function App() {
         <div className="mainTable">
           <ResponsiveBreakpointsExample></ResponsiveBreakpointsExample>
         </div>
-        <div className="addButton">
-          <Route path="/form" element={<NewScenarioForm/>}>
-          </Route>
-          <NewScenarioButton></NewScenarioButton>
-        </div>
+
 
       </div>
+      <div className="addButton">
+        <Route path="/form" element={<NewScenarioForm/>}>
+        </Route>
+        <NewScenarioButton></NewScenarioButton>
+      </div>
+
     </div>
   );
 }

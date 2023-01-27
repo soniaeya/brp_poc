@@ -7,11 +7,18 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useHistory } from 'react-router-dom';
 import nyan from "../../Img/nyancat.png"
 import userIcon from "../../Img/User profile.png";
+
+/*
+    - Option 1: User input through alert
+    - Option 2: User input through form (new page/popup)
+    - This file might be unnecessary
+
+ */
 function NewScenarioForm(){
 
     return(
         <div>
-            <img src={nyan} alt="user icon"></img>
+
         </div>
 
     );

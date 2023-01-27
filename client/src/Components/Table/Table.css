@@ -1,10 +1,11 @@
 .tableClass{
+    position: absolute;
     border-top-color: grey;
     border-color: white;
-    overflow-y: scroll;
+    overflow: scroll;
     table-layout: fixed;
-    height: 100%;
-    width: 80%;
+    height: 700px;
+    width: 1300px;
     background-color: white;
 }
 
@@ -16,6 +17,16 @@
     width: 80px;
     text-align: right;
 
+}
+
+.adding{
+    background-color: #2980b9;
+}
+
+.addButton{
+    left: 100%;
+    top: 80%;
+    position: absolute;
 }
 
 
