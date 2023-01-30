@@ -1,7 +1,7 @@
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import ResponsiveBreakpointsExample from "./Components/Table/Table.js"
+import MyTable from "./Components/Table/Table.js"
 import NewScenarioButton from "./Components/Buttons/NewScenarioButton"
 import SearchBar from "./Components/Header/SearchBar"
 import brpLogo from "./Img/BRP_logo.png"
@@ -13,7 +13,7 @@ import userIcon from "./Img/User profile.png"
 import MyNavbar from './Components/Navbar/MyNavbar';
 
 import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import NewScenarioForm from "./Components/Forms/NewScenarioForm";
 import "./Components/dropdownMenu/dropdownMenu"
 import React from "react";
@@ -24,14 +24,6 @@ function App() {
   return (
     <div className="App">
       <div className="leftDiv">
-
-        <div className="title">
-          <img className="brpLogo" src={brpLogo} alt="brp_logo"></img>
-          <p className="titleText">PnP Digitalization</p>
-
-        </div>
-
-
 
 
         <div>
@@ -54,16 +46,16 @@ function App() {
           <SearchBar></SearchBar>
         </div>
         <div className="mainTable">
-          <ResponsiveBreakpointsExample></ResponsiveBreakpointsExample>
+          <MyTable></MyTable>
         </div>
+      </div>
 
 
-      </div>
-      <div className="addButton">
-        <Route path="/form" element={<NewScenarioForm/>}>
-        </Route>
-      </div>
-      <DropdownMenu className="dropdownMenu"></DropdownMenu>
+        <Router>
+            <MyNavbar></MyNavbar>
+        </Router>
+
+
 
     </div>
   );
