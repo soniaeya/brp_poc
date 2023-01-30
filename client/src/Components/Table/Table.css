@@ -4,15 +4,27 @@
     border-color: white;
     overflow: scroll;
     table-layout: fixed;
-    height: 700px;
+    height: 600px;
     width: 1300px;
     background-color: white;
 }
 
+.tableClass Table{
+    border-top-color: grey;
+    border-color: white;
+    overflow: scroll;
+    table-layout: fixed;
+    width: 100%;
+    background-color: white;
+}
 
+.tableClass Popup{
+    position: absolute !important;
 
+    z-index: 7;
+    height: 1000px;
 
-
+}
 .folderIcon{
     width: 80px;
     text-align: right;
@@ -20,14 +32,26 @@
 }
 
 .adding{
-    background-color: #2980b9;
+    background-color: white;
 }
 
 .addButton{
     left: 100%;
     top: 80%;
     position: absolute;
+
 }
+
+.trigger{
+    z-index: 1000;
+    left: 1000px;
+}
+.popup{
+    left: 80%;
+    top: 80%;
+    position: fixed;
+}
+
 
 
 

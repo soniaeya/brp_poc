@@ -5,6 +5,7 @@ import data from "../../tableData.json"
 import React, {useState} from "react";
 import {nanoid} from "nanoid";
 import addButton from "../../Img/+ button.png";
+import Popup from "reactjs-popup";
 
 export function MyTable() {
     const [contacts, setContacts] = useState(data);
@@ -17,16 +18,12 @@ export function MyTable() {
 
     const handleAddFormChange = (event) => {
         event.preventDefault();
-
         const fieldName = event.target.getAttribute("name");
         const fieldValue = event.target.value;
-
         const newFormData = { ...addFormData };
         newFormData[fieldName] = fieldValue;
-
         setAddFormData(newFormData);
     };
-
 
     const handleAddFormSubmit = (event) => {
         event.preventDefault();
@@ -37,15 +34,11 @@ export function MyTable() {
             createdYear: addFormData.createdYear,
             createdBy:addFormData.createdBy,
             user: addFormData.user,
-
         };
 
         const newContacts = [...contacts, newContact];
         setContacts(newContacts);
     };
-
-
-
 
     return (
         <div className="tableClass">
@@ -73,13 +66,12 @@ export function MyTable() {
 
                 ))}
 
-
-
-
-
-
+                </tbody>
+            </Table>
+            <div className="popup">
+            <Popup trigger={<img className="trigger" src={addButton} alt="addButton"></img>}>
                 <div className="adding">
-                    <h2>Add a Contact</h2>
+                    <p>Adding a Scenario</p>
                     <form onSubmit={handleAddFormSubmit}>
                         <input
                             type="text"
@@ -112,16 +104,9 @@ export function MyTable() {
                         <button type="submit">Add</button>
                     </form>
                 </div>
-
-
-                </tbody>
-            </Table>
-
-
-
+            </Popup>
+            </div>
         </div>
-
-
     );
 }
 

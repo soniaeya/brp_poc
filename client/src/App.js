@@ -15,19 +15,25 @@ import MyNavbar from './Components/Navbar/MyNavbar';
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NewScenarioForm from "./Components/Forms/NewScenarioForm";
+import "./Components/dropdownMenu/dropdownMenu"
 import React from "react";
+import DropdownMenu from "./Components/dropdownMenu/dropdownMenu";
 
 function App() {
   let scenarios = [];
   return (
     <div className="App">
       <div className="leftDiv">
+
         <div className="title">
-          <div>
-            <img src={brpLogo} alt="brp_logo"></img>
-          </div>
+          <img className="brpLogo" src={brpLogo} alt="brp_logo"></img>
+          <p className="titleText">PnP Digitalization</p>
+
         </div>
-        <p className="titleText">PnP Digitalization</p>
+
+
+
+
         <div>
           <MyNavbar></MyNavbar>
 
@@ -40,10 +46,10 @@ function App() {
         <div className="headerObjects">
           <img src={ProLineSSV} alt="ProLineSSV"></img>
           <div className="notifIcon">
-            <img src={notif} alt="ProLineSSV"></img>
+            <img src={notif} alt="notif icon"></img>
           </div>
           <div className="userIcon">
-            <img src={userIcon} alt="user icon"></img>
+
           </div>
           <SearchBar></SearchBar>
         </div>
@@ -56,8 +62,8 @@ function App() {
       <div className="addButton">
         <Route path="/form" element={<NewScenarioForm/>}>
         </Route>
-        <NewScenarioButton></NewScenarioButton>
       </div>
+      <DropdownMenu className="dropdownMenu"></DropdownMenu>
 
     </div>
   );

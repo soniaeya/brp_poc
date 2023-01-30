@@ -10,7 +10,6 @@ function SearchBar() {
 
     return (
         <div>
-            <img id="searchIcon" src={loupe} alt="loupe"/>
 
             <input
 

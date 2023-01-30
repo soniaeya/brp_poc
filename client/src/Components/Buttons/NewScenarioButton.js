@@ -43,7 +43,11 @@ function NewScenarioButton() {       //This function displays the yellow NewScen
 
     return (
         <div>
+
             <img src={addButton} alt="addButton" onClick={createScenario}></img>
+
+
+
         </div>
     );
 }
