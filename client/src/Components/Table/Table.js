@@ -8,10 +8,13 @@ import addButton from "../../Img/+ button.png";
 import Popup from "reactjs-popup";
 import axios from "axios";
 
+const scenarios = [];
 export function MyTable() {
 
-
     const [contacts, setContacts] = useState(data);
+
+
+
     const [addFormData, setAddFormData] = useState({
         scenarioName: '',
         createdYear: '',
@@ -28,12 +31,14 @@ export function MyTable() {
      }, []);
 
     const handleAddFormChange = (event) => {
+
         event.preventDefault();
         const fieldName = event.target.getAttribute("name");
         const fieldValue = event.target.value;
         const newFormData = { ...addFormData };
         newFormData[fieldName] = fieldValue;
         setAddFormData(newFormData);
+
     };
 
     const handleAddFormSubmit = (event) => {
@@ -57,6 +62,12 @@ export function MyTable() {
 
         const newContacts = [...contacts, newContact];
         setContacts(newContacts);
+
+
+
+        scenarios.push(newContact.scenarioName);
+        console.log(scenarios);
+
     };
 
     return (
