@@ -2,10 +2,11 @@ import Table from 'react-bootstrap/Table';
 import "./Table.css"
 import folderIcon from "../../Img/folderIcon.png"
 import data from "../../tableData.json"
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import {nanoid} from "nanoid";
 import addButton from "../../Img/+ button.png";
 import Popup from "reactjs-popup";
+import axios from "axios";
 
 const scenarios = [];
 export function MyTable() {
@@ -21,6 +22,14 @@ export function MyTable() {
         user: ''
     });
 
+    useEffect(() => {
+        axios
+        .get("http://localhost:8000/api/scenario/")
+        .then((res) => setContacts(res.data ))
+        .catch((err) => console.log(err));
+    
+     }, []);
+
     const handleAddFormChange = (event) => {
 
         event.preventDefault();
@@ -34,6 +43,14 @@ export function MyTable() {
 
     const handleAddFormSubmit = (event) => {
         event.preventDefault();
+        let item = 
+        {
+            id: nanoid(),
+            title: addFormData.scenarioName,
+            createdBy: addFormData.createdBy,
+        };
+        axios
+      .post("http://localhost:8000/api/scenario/", item);
 
         const newContact = {
             id: nanoid(),

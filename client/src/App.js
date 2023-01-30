@@ -18,7 +18,7 @@ import NewScenarioForm from "./Components/Forms/NewScenarioForm";
 import "./Components/dropdownMenu/dropdownMenu"
 import React from "react";
 import DropdownMenu from "./Components/dropdownMenu/dropdownMenu";
-
+ 
 function App() {
   let scenarios = [];
   return (
