@@ -1,9 +1,9 @@
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import ResponsiveBreakpointsExample from "./Components/Table/Table.js"
+import Table from "./Components/Table/Table.js"
 import NewScenarioButton from "./Components/Buttons/NewScenarioButton"
-import SearchBar from "./Components/Header/SearchBar"
+// import SearchBar from "./Components/Header/SearchBar"
 import brpLogo from "./Img/BRP_logo.png"
 import ProLineSSV from "./Img/Pro-Line-SSV.png"
 
@@ -13,17 +13,21 @@ import userIcon from "./Img/User profile.png"
 import MyNavbar from './Components/Navbar/MyNavbar';
 
 import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Switch } from "react-router-dom";
 import NewScenarioForm from "./Components/Forms/NewScenarioForm";
 import "./Components/dropdownMenu/dropdownMenu"
-import React from "react";
+import React, { Component } from "react";
 import DropdownMenu from "./Components/dropdownMenu/dropdownMenu";
+import LoginPage from './pages/LoginPage';
+import HomePage from './pages/HomePage';
+import Header from './Components/Header';
+import PrivateRoute from './utils/PrivateRoute';
 
-function App() {
-  let scenarios = [];
-  return (
+class App extends Component {
+  render() {
+    return (
     <div className="App">
-      <div className="leftDiv">
+      {/* <div className="leftDiv">
 
         <div className="title">
           <img className="brpLogo" src={brpLogo} alt="brp_logo"></img>
@@ -54,7 +58,7 @@ function App() {
           <SearchBar></SearchBar>
         </div>
         <div className="mainTable">
-          <ResponsiveBreakpointsExample></ResponsiveBreakpointsExample>
+          <Table></Table>
         </div>
 
 
@@ -63,10 +67,24 @@ function App() {
         <Route path="/form" element={<NewScenarioForm/>}>
         </Route>
       </div>
-      <DropdownMenu className="dropdownMenu"></DropdownMenu>
+      <DropdownMenu className="dropdownMenu"></DropdownMenu> */}
 
+          <Header/>
+      <Routes>
+        {/* <AuthProvider> */}
+          {/* <Route component={HomePage} path="/" exact/> */}
+          <Route element={<HomePage/>} path='/' exact/>
+          <Route element={<LoginPage />} path='/login'/>
+        {/* </AuthProvider> */}
+      </Routes>
+      {/* <Routes>
+    <Route path='/' element={<HelloWorld />} />
+    <Route path='/contact' element={<Contact />} />
+    <Route path='/vehicules' element={<Vehicules />} />
+  </Routes> */}
     </div>
-  );
+    )
+  };
 }
 
 export default App;
