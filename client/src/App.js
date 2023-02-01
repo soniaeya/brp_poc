@@ -13,19 +13,19 @@ import userIcon from "./Img/User profile.png"
 import MyNavbar from './Components/Navbar/MyNavbar';
 
 import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NewScenarioForm from "./Components/Forms/NewScenarioForm";
 import "./Components/dropdownMenu/dropdownMenu"
-import React, { Component } from "react";
+import React from "react";
 import DropdownMenu from "./Components/dropdownMenu/dropdownMenu";
 import LoginPage from './pages/LoginPage';
 import HomePage from './pages/HomePage';
 import Header from './Components/Header';
 import PrivateRoute from './utils/PrivateRoute';
 
-class App extends Component {
-  render() {
-    return (
+function App() {
+  let scenarios = [];
+  return (
     <div className="App">
       {/* <div className="leftDiv">
 
@@ -73,7 +73,7 @@ class App extends Component {
       <Routes>
         {/* <AuthProvider> */}
           {/* <Route component={HomePage} path="/" exact/> */}
-          <Route element={<HomePage/>} path='/' exact/>
+          <PrivateRoute element={<HomePage />} path='/' exact/>
           <Route element={<LoginPage />} path='/login'/>
         {/* </AuthProvider> */}
       </Routes>
@@ -83,8 +83,7 @@ class App extends Component {
     <Route path='/vehicules' element={<Vehicules />} />
   </Routes> */}
     </div>
-    )
-  };
+  );
 }
 
 export default App;
