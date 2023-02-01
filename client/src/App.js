@@ -1,4 +1,3 @@
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import MyTable from "./Components/Table/Table.js"
@@ -13,52 +12,43 @@ import userIcon from "./Img/User profile.png"
 import MyNavbar from './Components/Navbar/MyNavbar';
 
 import ReactDOM from "react-dom/client";
-import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import NewScenarioForm from "./Components/Forms/NewScenarioForm";
 import "./Components/dropdownMenu/dropdownMenu"
 import React from "react";
 import DropdownMenu from "./Components/dropdownMenu/dropdownMenu";
- 
+
 function App() {
-  let scenarios = [];
-  return (
-    <div className="App">
-      <div className="leftDiv">
+    let scenarios = [];
+    return (
+        <div className="App">
+            <div className="leftDiv">
+                <div>
+                    <MyNavbar></MyNavbar>
+                </div>
+
+            </div>
+            <div className="mainDiv">
+                <div className="headerObjects">
+                    <img className="ProLineSSV" src={ProLineSSV} alt="ProLineSSV"></img>
+                    <img className="notifIcon" src={notif} alt="notif icon"></img>
+                    <img className="userIcon" src={userIcon} alt="user icon"></img>
+
+                    <SearchBar></SearchBar>
+                </div>
+                <div className="mainTable">
+                    <MyTable></MyTable>
+                </div>
+            </div>
 
 
-        <div>
-          <MyNavbar></MyNavbar>
+            <Router>
+                <MyNavbar></MyNavbar>
+            </Router>
+
 
         </div>
-
-
-
-      </div>
-      <div className="mainDiv">
-        <div className="headerObjects">
-          <img src={ProLineSSV} alt="ProLineSSV"></img>
-          <div className="notifIcon">
-            <img src={notif} alt="notif icon"></img>
-          </div>
-          <div className="userIcon">
-
-          </div>
-          <SearchBar></SearchBar>
-        </div>
-        <div className="mainTable">
-          <MyTable></MyTable>
-        </div>
-      </div>
-
-
-        <Router>
-            <MyNavbar></MyNavbar>
-        </Router>
-
-
-
-    </div>
-  );
+    );
 }
 
 export default App;

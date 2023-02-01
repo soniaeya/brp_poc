@@ -15,7 +15,7 @@
 
 
 .leftDiv{
-  position: absolute;
+  position: fixed;
   height: 100%;
   width:15%;
   background-color:rgb(77, 77, 77);
@@ -38,7 +38,7 @@
 }
 
 .mainDiv{
-  position: absolute;
+  position: fixed;
   left: 15%;
   height: 100%;
   width: 100%;
@@ -52,6 +52,12 @@
 - User Account
 */
 
+.ProLineSSV
+{
+  width:75px; /* you can use % */
+  height: auto;
+}
+
 /*Main Objects
 - table
 - yellow add scenario button
@@ -62,8 +68,6 @@
   position: absolute;
   left: 5%;
   top: 30%;
-
-
 }
 
 .addButton img{
@@ -94,17 +98,16 @@
   width: 40px;
   height: 40px;
 }
-.userIcon{
-  left: 100%;
+.userIcon {
+  left: 70%;
   top: 6%;
   position: absolute;
-  
+  z-index: 10000;
+  width:50px;
+  height: auto;
 }
 
-.userIcon img{
-  width: 60px;
-  height: 60px;
-}
+
 
 .test{
   background-color: white;

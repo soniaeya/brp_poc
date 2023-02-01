@@ -1,22 +1,18 @@
 .tableClass{
+    top: 120px;
     position: fixed;
     border-top-color: grey;
     border-color: white;
-    overflow: scroll;
+    overflow-y: scroll;
     table-layout: fixed;
-    height: 60%;
+    height: 580px;
     width: 70%;
     background-color: white;
+    padding: 0px;
+    border-radius: 3px;
 }
 
-.tableClass Table{
-    border-top-color: grey;
-    border-color: white;
-    overflow: scroll;
-    table-layout: fixed;
-    width: 100%;
-    background-color: white;
-}
+
 
 .tableClass Popup{
     position: absolute !important;
@@ -32,6 +28,7 @@
 }
 
 .adding{
+
     background-color: white;
 }
 
@@ -52,6 +49,19 @@
     position: fixed;
 }
 
+.edit{
+    width: 20px;
+}
+.readOnly{
+    width: 20px;
+}
 
+
+.scenarioName, .createdYear, .createdBy, .user{
+    width: 170px;
+}
+th.folderIcon{
+    left: 100%;
+}
 
 

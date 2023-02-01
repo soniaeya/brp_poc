@@ -12,7 +12,6 @@ function SearchBar() {
         <div>
 
             <input
-
                 className="SearchBar"
                 placeholder="Search..."
                 type="text"

@@ -1,31 +1,4 @@
-/*
-const Nav = styled.div`
-  background: grey;
-  height: 80px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-`
-const SidebarNav = styled.div`
-  background: grey;
-  width: 250px;
-  height: 100vh;
 
-`
-const NavIcon = styled(Link)`
-  margin-left: 2rem;
-  height: 80px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-
-`
-const SidebarWrap = styled.div`
-  width: 100%;
-
-`
-
- */
 .brpLogo{
     display: block;
     margin-left: auto;
