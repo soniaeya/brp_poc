@@ -18,6 +18,13 @@ const DropdownLink = styled(Link)`
     cursor: pointer;
     text-decoration: none;
   }
+  &:focus {
+    background: rgb(77, 77, 77);
+    cursor: pointer;
+
+    text-decoration: none;
+    color: #fbd304;
+  }
 `;
 
 const SidebarLink = styled(Link)`
@@ -41,6 +48,9 @@ const SidebarLink = styled(Link)`
     text-decoration: none;
     color: #fbd304;
   }
+  
+  
+  
 `;
 
 const SidebarLabel = styled.span`
