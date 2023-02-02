@@ -57,7 +57,7 @@
 }
 
 
-.scenarioName, .createdYear, .createdBy, .user{
+.scenarioName, .createdYear, .createdBy, .lastModified{
     width: 170px;
 }
 th.folderIcon{

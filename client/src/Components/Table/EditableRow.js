@@ -39,8 +39,8 @@ const EditableRow = ({
                     type="text"
                     required="required"
                     placeholder="User type"
-                    name="user"
-                    value={editFormData.user}
+                    name="lastModified"
+                    value={editFormData.lastModified}
                     onChange={handleEditFormChange}
                 ></input>
             </td>

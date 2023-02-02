@@ -10,7 +10,7 @@ const ReadOnlyRow = ({ contact, handleEditClick, handleDeleteClick }) => {
             <td>{contact.scenarioName}</td>
             <td>{contact.createdYear}</td>
             <td>{contact.createdBy}</td>
-            <td>{contact.user}</td>
+            <td>{contact.lastModified}</td>
             <td>
 
                 <TbEdit onClick={(event) => handleEditClick(event, contact)}></TbEdit>

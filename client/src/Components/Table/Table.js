@@ -19,7 +19,7 @@ export function MyTable() {
         scenarioName: '',
         createdYear: '',
         createdBy:'',
-        user: ''
+        lastModified: ''
     });
 
 
@@ -27,7 +27,7 @@ export function MyTable() {
         scenarioName: '',
         createdYear: '',
         createdBy:'',
-        user: ''
+        lastModified: ''
     });
     const [editContactId, setEditContactId] = useState(null);
 
@@ -58,11 +58,19 @@ export function MyTable() {
     const handleEditFormChange = (event) => {
         event.preventDefault();
 
+        const date = new Date();
+        let day = date.getDate();
+        let month = date.getMonth() + 1;
+        let year = date.getFullYear();
+        let fullDate = `${month}-${day}-${year}`
+
+
         const fieldName = event.target.getAttribute("name");
         const fieldValue = event.target.value;
 
         const newFormData = { ...editFormData };
         newFormData[fieldName] = fieldValue;
+        newFormData.lastModified = fullDate;
 
         setEditFormData(newFormData);
         axios
@@ -73,17 +81,16 @@ export function MyTable() {
     };
     const handleEditClick = (event, contact) => {
         event.preventDefault();
-        console.log(contact.id)
-        console.log(editContactId)
 
         setEditContactId(contact.id);
+
         
 
         const formValues = {
             scenarioName: contact.scenarioName,
             createdYear: contact.createdYear,
             createdBy: contact.createdBy,
-            user: contact.user,
+            lastModified: contact.lastModified,
         };
 
         setEditFormData(formValues);
@@ -102,25 +109,25 @@ export function MyTable() {
 
     const handleAddFormSubmit = (event) => {
         event.preventDefault();
-        let item = 
-        {
-            id: nanoid(),
-            scenarioName: addFormData.scenarioName,
-            createdYear: addFormData.createdYear,
-            createdBy:addFormData.createdBy,
-            user: addFormData.user,
-        };
-        axios
-      .post("http://localhost:8000/api/scenarios/", item);
+        const date = new Date();
+        let day = date.getDate();
+        let month = date.getMonth() + 1;
+        let year = date.getFullYear();
+        let fullDate = `${month}-${day}-${year}`
+        console.log(fullDate);
 
+
+        
         const newContact = {
             id: nanoid(),
             scenarioName: addFormData.scenarioName,
-            createdYear: addFormData.createdYear,
+            createdYear: fullDate,
             createdBy:addFormData.createdBy,
-            user: addFormData.user,
+            lastModified: fullDate,
         };
-
+        
+        axios
+      .post("http://localhost:8000/api/scenarios/", newContact);
         const newContacts = [...contacts, newContact];
         setContacts(newContacts);
 
@@ -142,10 +149,9 @@ export function MyTable() {
                 <tr>
                     <th className="folderIcon" rowSpan="2">Exercise</th>
                     <th className="scenarioName" rowSpan="2"></th>
-                    <th className="createdYear">Season Year</th>
+                    <th className="createdYear">Created On</th>
                     <th className="createdBy">Created By</th>
-                    <th className="user">User Type</th>
-                </tr>
+                    <th className="lastModified">Last Modified</th>                </tr>
                 </thead>
                 <tbody>
 
@@ -189,26 +195,10 @@ export function MyTable() {
                         />
                         <input
                             type="text"
-                            className="createdYear"
-                            name="createdYear"
-                            required="required"
-                            placeholder="Created Year"
-                            onChange={handleAddFormChange}
-                        />
-                        <input
-                            type="text"
                             className="createdBy"
                             name="createdBy"
                             required="required"
                             placeholder="Created By"
-                            onChange={handleAddFormChange}
-                        />
-                        <input
-                            type="text"
-                            className="user"
-                            name="user"
-                            required="required"
-                            placeholder="User Type"
                             onChange={handleAddFormChange}
                         />
                         <button type="submit">Add</button>
