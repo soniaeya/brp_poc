@@ -35,14 +35,7 @@ const EditableRow = ({
                 ></input>
             </td>
             <td>
-                <input
-                    type="text"
-                    required="required"
-                    placeholder="User type"
-                    name="lastModified"
-                    value={editFormData.lastModified}
-                    onChange={handleEditFormChange}
-                ></input>
+                {editFormData.lastModified}
             </td>
             <td><button type="submit">Save</button></td>
             <td><button type="button" onClick={handleCancelClick}>Cancel</button></td>

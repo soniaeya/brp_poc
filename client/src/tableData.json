@@ -3,12 +3,12 @@
     "scenarioName": "first",
     "createdYear": "2023",
     "createdBy": "Sonia",
-    "user": "Admin"
+    "lastModified": "2023"
   },
   {"id": "1",
     "scenarioName": "second",
     "createdYear": "2022",
     "createdBy": "Alison",
-    "user": "User"
+    "lastModified": "2023"
   }
 ]
