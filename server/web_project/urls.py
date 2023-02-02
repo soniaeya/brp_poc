@@ -19,7 +19,7 @@ from rest_framework import routers
 from scenario import views
 
 router = routers.DefaultRouter()
-router.register(r'scenario', views.ScenarioView, 'scenario')
+router.register(r'scenarios', views.ScenarioView, 'scenario')
 
 urlpatterns = [
     path('admin/', admin.site.urls),

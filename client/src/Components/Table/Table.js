@@ -32,12 +32,16 @@ export function MyTable() {
     const [editContactId, setEditContactId] = useState(null);
 
 
-
-    useEffect(() => {
+    const refreshList = () => {
         axios
-        .get("http://localhost:8000/api/scenario/")
+        .get("http://localhost:8000/api/scenarios/")
         .then((res) => setContacts(res.data ))
         .catch((err) => console.log(err));
+
+    }
+
+    useEffect(() => {
+        refreshList();
     
      }, []);
 
@@ -61,13 +65,19 @@ export function MyTable() {
         newFormData[fieldName] = fieldValue;
 
         setEditFormData(newFormData);
+        axios
+        .put(`http://localhost:8000/api/scenarios/${editContactId}/`, newFormData)
     };
     const handleCancelClick = () => {
         setEditContactId(null);
     };
     const handleEditClick = (event, contact) => {
         event.preventDefault();
+        console.log(contact.id)
+        console.log(editContactId)
+
         setEditContactId(contact.id);
+        
 
         const formValues = {
             scenarioName: contact.scenarioName,
@@ -86,6 +96,8 @@ export function MyTable() {
         newContacts.splice(index, 1);
 
         setContacts(newContacts);
+        axios
+        .delete(`http://localhost:8000/api/scenarios/${contactId}/`);
     };
 
     const handleAddFormSubmit = (event) => {
@@ -93,11 +105,13 @@ export function MyTable() {
         let item = 
         {
             id: nanoid(),
-            title: addFormData.scenarioName,
-            createdBy: addFormData.createdBy,
+            scenarioName: addFormData.scenarioName,
+            createdYear: addFormData.createdYear,
+            createdBy:addFormData.createdBy,
+            user: addFormData.user,
         };
         axios
-      .post("http://localhost:8000/api/scenario/", item);
+      .post("http://localhost:8000/api/scenarios/", item);
 
         const newContact = {
             id: nanoid(),
