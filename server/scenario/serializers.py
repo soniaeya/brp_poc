@@ -4,4 +4,5 @@ from .models import Scenario
 class ScenarioSerializer(serializers.ModelSerializer):
     class Meta:
         model = Scenario
-        fields = ('id', 'title', 'createdBy')
+        fields = ('id', 'scenarioName', 'createdYear', 'createdBy', 'lastModified')
+

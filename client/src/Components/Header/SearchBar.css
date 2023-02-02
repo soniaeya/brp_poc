@@ -1,0 +1,35 @@
+
+.form-field {
+    position: relative;
+    display: inline-block;
+}
+
+.icon {
+    position: absolute;
+    right: 0;
+}
+
+.SearchBar {
+    margin-top: 12px;
+    max-width: 50%;
+    position: fixed;
+    background-image: url("../../Img/loupe.png");
+
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 30px;
+
+    font-size: 16px;
+    padding: 1px 0px 1px 40px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+
+
+}
+
+#searchIcon {
+    margin-top: 30px;
+    width: 700px;
+    position: absolute;
+
+}

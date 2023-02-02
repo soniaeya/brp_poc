@@ -1,0 +1,67 @@
+.tableClass{
+    top: 120px;
+    position: fixed;
+    border-top-color: grey;
+    border-color: white;
+    overflow-y: scroll;
+    table-layout: fixed;
+    height: 580px;
+    width: 70%;
+    background-color: white;
+    padding: 0px;
+    border-radius: 3px;
+}
+
+
+
+.tableClass Popup{
+    position: absolute !important;
+
+    z-index: 7;
+    height: 1000px;
+
+}
+.folderIcon{
+    width: 80px;
+    text-align: right;
+
+}
+
+.adding{
+
+    background-color: white;
+}
+
+.addButton{
+    left: 100%;
+    top: 80%;
+    position: absolute;
+
+}
+
+.trigger{
+    z-index: 1000;
+    left: 1000px;
+}
+.popup{
+    left: 80%;
+    top: 80%;
+    position: fixed;
+}
+
+.edit{
+    width: 20px;
+}
+.readOnly{
+    width: 20px;
+}
+
+
+.scenarioName, .createdYear, .createdBy, .lastModified{
+    width: 170px;
+}
+th.folderIcon{
+    left: 100%;
+}
+
+
