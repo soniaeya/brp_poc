@@ -21,14 +21,7 @@ const EditableRow = ({
                 ></input>
             </td>
             <td>
-                <input
-                    type="text"
-                    required="required"
-                    placeholder="Year"
-                    name="createdYear"
-                    value={editFormData.createdYear}
-                    onChange={handleEditFormChange}
-                ></input>
+                {editFormData.createdYear}
             </td>
             <td>
                 <input
